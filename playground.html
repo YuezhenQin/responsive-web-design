@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shimmer Component</title>
+<style>
+  .container {
+    width: 200px;
+    height: 16px;
+    background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer {
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.4) 40%, transparent 60%);
+    animation: shimmer-animation 1s infinite linear;
+    position: absolute;
+    top: 0;
+    left: -50%;
+  }
+
+  @keyframes shimmer-animation {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="shimmer"></div>
+</div>
+
+<script>
+  // Optional JavaScript functionality can be added here
+</script>
+
+</body>
+</html>
